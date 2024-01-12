@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.3;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.wrapper {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    font-size: 8rem;
+    position: fixed;
+    z-index: 10;
+    top: 15%;
+    left: 4rem;
+    line-height: 0.9;
+}
+
+.line {
+    background: #760AFF;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section.character::before {
+    content: '';
+    width: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.block {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(-100%);
+}
+
+.fantominus::before,
+.spectrum::before,
+.ectoplasma::before,
+ .block {
+    background-color: #6f00ff;
+}
+
+.caption {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    width: 44%;
+    font-weight: 400;
+    color: #444;
+    font-family: monospace;
+    transform: translate(100%, 100%);
+}
+
+.character img {
+    position: relative;
+    z-index: 10;
+    width: auto;
+    transform: translateY(-100%);
+    animation: updown 2.3s ease-in-out alternate infinite;
+}
+
+.fantomImg {
+    height: 40vh;
+}
+
+.spectrImg,
+.ectoImg {
+    height: 60vh;
+}
+
+@keyframes updown {
+    from {
+        top: -55px;
+    }
+
+    to {
+        top: -100px;
+    }
+
+}
+
+.huge-text {
+    font-size: 25rem;
+    width: 100%;
+    text-align: center;
+    color: #f52b2b;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transform: translateY(100%);
+    -webkit-text-stroke: 0.5px black;
+}
+
+.info {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    font-size: 3rem;
+    text-align: right;
+    transform: translateY(-200%);
+}
+
+.info .dot::after {
+    content: ":";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.thumb {
+    margin-bottom: 10px;
+    width: 135px;
+    height: 40px;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    overflow: hidden;
+}
+
+.thumb::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 10px #fff;
+    /* filter: blur(1px); */
+    height: 40px;
+    width: 10px;
+    left: 0px;
+    transform: skewX(-30deg);
+    animation: shine 4s ease-in-out infinite;
+    z-index: 20;
+}
+
+.thumb img {
+    width: 40px;
+    height: 40px;
+    animation: none;
+    transform: translate(0%);
+}
+
+.thumb .ghost-type-img {
+    margin-right: 3px;
+}
+
+.thumb .poison-type-img {
+    margin-right: 13px;
+}
+
+.typeGhost,
+.typePoison {
+    margin-right: 17px;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.typeGhost {
+    letter-spacing: 0.30px;
+}
+
+.typePoison {
+    letter-spacing: 0.60px;
+}
+
+/* Without delay */
+/* @keyframes shine {
+    0% {
+        left: 0%;
+    }
+
+    50%,
+    100% {
+        left: 102%;
+    }
+} */
+
+/* With delay (first effect) */
+/* @keyframes shine {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40%,
+    100% {
+        left: 105%;
+    }
+} */
+
+/* With delay (second effect) */
+@keyframes shine {
+
+    0%,
+    15% {
+        opacity: 0;
+    }
+
+    10%,
+    20% {
+        opacity: 1;
+    }
+
+    30%,
+    100% {
+        opacity: 1;
+        left: 105%;
+    }
+}

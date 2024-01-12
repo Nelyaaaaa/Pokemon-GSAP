@@ -1,0 +1,12 @@
+{
+  "name": "pokemon_gsap",
+  "version": "1.0.0",
+  "description": "Evolution du Pokemon Fantominus avec animation au scroll GSAP",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "N.",
+  "license": "ISC"
+}
